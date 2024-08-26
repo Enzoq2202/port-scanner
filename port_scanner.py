@@ -77,7 +77,6 @@ def get_service(port):
     }
     return services.get(port, "Serviço Desconhecido")
 
-
 def port_scan(host, start_port, end_port, output_text, progress_bar):
     output_text.delete(1.0, tk.END)
     total_ports = end_port - start_port + 1
@@ -87,8 +86,12 @@ def port_scan(host, start_port, end_port, output_text, progress_bar):
 
     for port in range(start_port, end_port + 1):
         scan_port(host, port, output_text)
-        progress_bar.step(1)  
-        root.update_idletasks()  
+        progress_bar.step(1)
+        root.update_idletasks()
+
+    
+    output_text.insert(tk.END, "\nEscaneamento concluído.\n")
+    messagebox.showinfo("Informação", "O escaneamento foi concluído!")
 
 def start_scan():
     host = entry_host.get()
@@ -101,7 +104,7 @@ def start_scan():
 
     port_scan(host, start_port, end_port, output_text, progress_bar)
 
-#interface gráfica
+# interface gráfica
 root = tk.Tk()
 root.title("Escaneamento de Portas TCP")
 
