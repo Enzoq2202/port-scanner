@@ -37,6 +37,11 @@ python port_scanner.py
 - **Porta Final**: Defina a porta final para o escaneamento (ex: 1000).
 - Após o preenchimento, clique em "**Iniciar Escaneamento**" para começar. O progresso será mostrado na barra de progresso, e as portas abertas serão listadas na caixa de saída.
 
+## Captura de Tela
+
+Aqui está uma captura de tela da interface:
+
+<img src="https://github.com/user-attachments/assets/544c9d71-2b5d-49d5-9099-1196cf890e23" alt="Captura de Tela 2024-08-26 às 00 25 01" width="600">
 
 
 
